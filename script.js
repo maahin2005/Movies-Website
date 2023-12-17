@@ -1,5 +1,5 @@
 let API_KEY = "d52d540c";
-let BASE_URL = "http://www.omdbapi.com/";
+let BASE_URL = "https://www.omdbapi.com/";
 
 let searchContainer = document.querySelector(".main_container");
 let moviesDiv = document.getElementById("showMoviesDiv");
