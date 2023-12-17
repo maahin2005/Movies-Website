@@ -1,0 +1,498 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+
+    background-image: url('https://wallpaperaccess.com/full/1526011.jpg');
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.main_container {
+    width: 50%;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_container>div {
+    width: 100%;
+}
+
+#search_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    height: 50px;
+
+    border-radius: 40px;
+
+    backdrop-filter: blur(5px);
+
+
+    /* border: 1px solid rgba(255, 255, 255, 0.6); */
+
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 10px 36px 0px, rgba(155, 154, 154, 0.06) 0px 0px 0px 1px;
+
+
+}
+
+#search_box {
+    margin: auto 0;
+    width: 90%;
+
+    background: transparent;
+    outline: none;
+
+    border: none;
+    padding: 0 30px;
+
+    height: 100%;
+    color: #ccc;
+
+}
+
+#search_div:hover {
+
+
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+
+
+}
+
+#search_box::placeholder {
+    color: #ccc;
+    font-size: .8rem;
+}
+
+#search_btn {
+
+    border-left: none;
+
+    margin: auto 0;
+    color: #fff;
+    width: 10%;
+
+
+    background: transparent;
+
+    border: none;
+
+    font-size: 1.3rem;
+
+    outline: none;
+
+    height: 100%;
+
+    cursor: pointer;
+}
+
+@keyframes tremble {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.3) rotate(-4deg);
+    }
+
+    50% {
+        transform: scale(1.3) rotate(4deg);
+    }
+
+    75% {
+        transform: scale(1.3) rotate(-4deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#search_btn:hover {
+
+    animation: tremble 1.2s infinite;
+}
+
+#showMoviesDiv {
+
+    display: flex;
+
+    justify-content: space-evenly;
+
+
+    width: 70%;
+
+    gap: 2%;
+
+    min-width: 60%;
+
+    padding: 20px;
+
+    max-width: fit-content;
+
+    background-color: transparent;
+    margin: auto;
+
+    border-radius: 15px;
+
+    box-shadow: rgba(84, 116, 130, 0.12) 0px 2px 4px 0px, rgba(139, 173, 187, 0.32) 0px 2px 16px 0px;
+
+    backdrop-filter: blur(10px);
+}
+
+#showMoviesDiv>div {
+    width: 40%;
+    max-width: 45%;
+
+    color: #fff;
+
+}
+
+
+
+#showMoviesDiv>div:first-child {
+    width: fit-content;
+}
+
+.details h1,
+.details h3,
+.details h4,
+.details ul,
+.details ul li {
+
+    margin: 10px auto;
+
+}
+
+.details ul li {
+    margin-left: 30px;
+    list-style: circle;
+}
+
+.details h1 {
+    margin-top: 0
+}
+
+.poster {
+    width: fit-content;
+    margin: auto;
+}
+
+.poster img {
+
+    border-radius: 10px;
+    box-shadow: rgba(113, 113, 235, 0.25) 0px 50px 100px -20px, rgba(246, 158, 214, 0.3) 0px 30px 60px -30px, rgba(62, 149, 237, 0.35) 0px -2px 6px 0px inset;
+}
+
+#showMoviesDiv:hover,
+.poster img:hover {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+#showMoviesDiv:hover .poster img {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+#error {
+    width: 350px;
+
+    border-radius: 40px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #122;
+
+    animation: fadeIn 0.5s ease-in-out;
+
+    height: 70px;
+    background-color: rgba(250, 89, 89, 0.8);
+
+    margin: 30px auto;
+}
+
+#error h1 {
+    font-size: 26px
+}
+
+.backBTN {
+    height: fit-content;
+
+    background: transparent;
+
+    border: none;
+    outline: none;
+
+    color: #fff;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.backBTN:hover {
+    color: #ddd;
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+
+    body {
+        height: max-content;
+
+        min-height: 100vh;
+
+        align-items: flex-start;
+
+        background-image: url('https://www.ixpap.com/images/2021/11/Matt-Black-Wallpaper-3-768x1536.jpg');
+    }
+
+    .main_container {
+        width: 90%;
+
+        height: 80%;
+
+
+    }
+
+    #search_div {
+        width: 95%;
+        display: block;
+
+        text-align: center;
+        margin: auto;
+
+    }
+
+    #search_box {
+        margin: auto 0;
+        width: 100%;
+
+        padding: 0;
+
+        text-align: center;
+
+
+    }
+
+    #search_btn {
+
+
+        margin: 20px auto;
+        color: #fff;
+        width: 40%;
+
+
+
+        border: none;
+
+
+        font-size: 2.3rem;
+
+
+
+        height: 100%;
+
+    }
+
+    #search_box::placeholder {
+        font-size: 1rem;
+
+        text-align: center;
+
+    }
+
+
+    #showMoviesDiv {
+
+        display: block;
+
+
+        width: 90%;
+
+        padding: 10px;
+
+
+        backdrop-filter: blur(0px);
+
+    }
+
+    #showMoviesDiv>div:first-child {
+        width: 100%;
+
+        margin: auto;
+
+    }
+
+    #showMoviesDiv>div {
+        margin: auto;
+        width: 90%;
+        max-width: 90%;
+
+
+    }
+
+    .poster {
+        width: 100%;
+
+        margin: auto;
+    }
+
+    .poster img {
+        width: 100%;
+
+        margin: auto;
+    }
+
+
+    #error {
+        width: 250px;
+
+
+        text-align: center;
+
+
+        height: 70px;
+
+        margin: 70px auto;
+    }
+
+    #error h1 {
+        font-size: 20px
+    }
+
+    .backBTN {
+        height: fit-content;
+
+
+        margin: 20px auto;
+    }
+
+
+
+
+}
+
+@media screen and (min-width:801px) and (max-width: 1000px) {
+
+
+    body {
+        height: max-content;
+
+        min-height: 100vh;
+    }
+
+
+
+    #showMoviesDiv {
+        width: 80%;
+
+        max-width: 90%;
+
+        margin: auto;
+    }
+
+
+    #showMoviesDiv>div:first-child {
+        width: 90%;
+
+        margin: auto;
+
+    }
+
+
+    #showMoviesDiv>div {
+        margin: auto;
+        width: 50%;
+        max-width: 80%;
+
+
+    }
+
+
+}
+
+@media screen and (min-width:1001px) and (max-width: 1400px) {
+
+
+    body {
+        height: max-content;
+
+        min-height: 100vh;
+    }
+
+
+
+    #showMoviesDiv {
+        width: 70%;
+
+        max-width: 90%;
+
+        margin: auto;
+    }
+
+
+    #showMoviesDiv>div:first-child {
+        width: 80%;
+
+        margin: auto;
+
+    }
+
+
+    #showMoviesDiv>div {
+        margin: auto;
+        width: 50%;
+        max-width: 80%;
+
+
+    }
+
+
+}

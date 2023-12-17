@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies Details by Mahin</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./Web/icons8-popcorn-cute-clipart-96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./Web/icons8-popcorn-cute-clipart-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./Web/icons8-popcorn-cute-clipart-16.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+  </head>
+  <body>
+    <div class="main_container">
+      <div>
+        <div id="search_div">
+          <input
+            type="text"
+            id="search_box"
+            placeholder="Search Movie & Get Detail"
+          />
+          <button
+            id="search_btn"
+            onclick="searchMovies()"
+            class="fa-brands fa-searchengin"
+          ></button>
+        </div>
+        <div id="error">
+          <h1></h1>
+        </div>
+      </div>
+    </div>
+    <div id="showMoviesDiv"></div>
+  </body>
+</html>
+<script src="script.js"></script>
+<script
+  src="https://kit.fontawesome.com/7e5a0dff79.js"
+  crossorigin="anonymous"
+></script>
